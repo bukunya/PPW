@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --hijau: #b1d8bd;
+  --hitam: #343434;
+  --coklat: #cd8267;
+  --putih: #fafff9;
+  --kuning: #fdcc04;
+  --padding-x: calc((100vw - 1200px) / 2);
+  --padding: 0 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  /* border: 1px solid red; */
+}
+
+/* Utility */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--hijau);
+  border-left: 0.1rem solid var(--putih);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--coklat);
+  cursor: grabbing;
+  border-radius: 6px;
+}
+
+.white {
+  border: 1px solid white;
+}
+.black {
+  border: 1px solid black;
+}
+.blue {
+  border: 1px solid blue;
+}
+.red {
+  border: 1px solid red;
+}
+
+.f-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-center-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cta {
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  color: var(--hitam);
+  background: var(--kuning);
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.cta:hover {
+  transform: translateY(-3px);
+  text-decoration: underline;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: var(--hitam);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--putih);
+}
+
+span {
+  color: var(--hitam);
+}
+/* End Utility */
+
+/* Nav */
+nav {
+  height: 100px;
+  background-color: var(--hijau);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem var(--padding-x);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav img:hover {
+  transform: translateY(-3px);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: var(--putih);
+  padding: 0 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.nav-items a:hover {
+  color: var(--hitam);
+  text-decoration: underline;
+}
+/* End Nav */
+
+/* Grid */
+.single-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(250px, 1fr));
+  padding: 3rem var(--padding-x);
+}
+
+.double-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  padding: 3rem var(--padding-x);
+}
+
+.triple-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  padding: 3rem var(--padding-x);
+}
+
+.quad-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  padding: 3rem var(--padding-x);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 3rem var(--padding-x);
+}
+/* End Grid */
+
+/* Hero */
+.hero {
+  height: 676px;
+  background: var(--hijau);
+}
+
+.hero div {
+  padding: 0rem 2rem;
+}
+
+.hero p,
+.hero h1 {
+  text-align: center;
+}
+
+.rating {
+  background-color: var(--coklat);
+  height: 65px;
+}
+
+.rating-container {
+  gap: 10px;
+  color: var(--putih);
+}
+/* End Hero */
+
+/* Profil */
+.profil {
+  background-color: var(--hijau);
+  height: 676px;
+}
+
+.profil div {
+  padding: var(--padding);
+}
+
+.profil div:first-child {
+  align-items: flex-start;
+}
+/* End Profil */
+
+/* Kelebihan */
+.kelebihan {
+  background-color: var(--coklat);
+}
+
+.kelebihan-header {
+  padding: 2rem 2rem 0 2rem;
+}
+
+.kelebihan-items {
+  padding: 1rem var(--padding-x);
+}
+
+.card {
+  padding: 2rem;
+  background-color: var(--putih);
+  color: var(--hitam);
+  border-radius: 10px;
+  margin: 0 0.5rem 1rem 0.5rem;
+  height: auto;
+}
+
+.card p {
+  color: inherit;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card img {
+  transform: translateY(-0.5rem);
+  margin-right: 1rem;
+}
+/* End Kelebihan */
+
+/* Testimoni */
+.testimoni {
+  background-color: var(--hijau);
+}
+
+.testimoni-header {
+  padding: 2rem 2rem 0 2rem;
+}
+
+.testimoni .card {
+  height: auto;
+  text-align: center;
+}
+
+.testimoni .card h1 {
+  font-size: 1.5rem;
+}
+
+.testimoni .card p {
+  font-size: 1rem;
+}
+
+/* End Testimoni */
+
+/* FAQ */
+.faq {
+  background-color: var(--coklat);
+}
+
+.faq-container {
+  padding: var(--padding);
+}
+
+.faq-container h1 {
+  text-align: center;
+}
+/* End FAQ */
+
+/* Reassurance */
+.reassurance {
+  background-color: var(--hijau);
+  text-align: center;
+}
+
+.reassurance div {
+  padding: var(--padding);
+}
+/* End Reassurance */
+
+/* Footer */
+.footer {
+  background-color: var(--kuning);
+}
+
+.footer-box {
+  background-color: var(--coklat);
+}
+
+.footer-triple-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  background-color: var(--putih);
+  margin: 0 2rem 0 2rem;
+  padding-bottom: 2rem;
+}
+
+footer div {
+  padding: 2rem 2rem 0 2rem;
+}
+
+footer p {
+  margin: 0;
+  color: var(--hitam);
+}
+
+footer ul {
+  padding-left: 1rem;
+}
+/* End Footer */
+
+/* Responsive */
+
+@media screen and (max-width: 1024px) {
+  .card p {
+    font-size: 1rem;
+  }
+
+  .triple-grid,
+  .quad-grid {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    padding: var(--padding);
+  }
+
+  .footer-triple-grid {
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    padding: var(--padding);
+    height: 75px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  iframe {
+    height: 85%;
+  }
+
+  nav img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .nav-items a {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .triple-grid,
+  .quad-grid {
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+    padding: var(--padding);
+  }
+
+  .double-grid {
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+  }
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* End Responsive */

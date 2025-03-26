@@ -1,0 +1,25 @@
+* {
+  margin: 1rem;
+}
+
+body {
+  background-color: lightgray;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: gray;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-color: black;
+    color: white;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    background-color: white;
+    color: black;
+  }
+}
